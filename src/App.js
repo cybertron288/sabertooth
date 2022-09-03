@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Home from "./pages/Home";
+import { ThemeProvider } from "@mui/material/styles"
+import theme from "./Theme/Theme"
+import AdapterDateFns from '@date-io/date-fns';
+import { LocalizationProvider } from '@mui/x-date-pickers'
+import GlobalState from "./context/GlobalState"
 
 function App() {
+ 
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <GlobalState>
+    <ThemeProvider theme={theme}>
+    <LocalizationProvider dateAdapter={AdapterDateFns}>
+    <Home/>
+    </LocalizationProvider>
+    </ThemeProvider>
+    </GlobalState>
+    </>
   );
 }
 

@@ -1,12 +1,12 @@
 import { Grid, TextField, Typography } from "@mui/material"
-import React, { useContext } from "react"
+import React, { useState } from "react"
 import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined"
 import { DatePicker } from "@mui/x-date-pickers"
 import { Box } from "@mui/system"
-import GlobalContext from "../context/GlobalContext"
 
-const Datepicker = () => {
-  const  { setFirstDate, firstDate, setSecondDate, secondDate } = useContext(GlobalContext)
+const DatePickerCom = () => {
+  const [firstDate, setFirstDate] = useState(new Date())
+  const [secondDate, setSecondDate] = useState(new Date())
   return (
     <>
       <Grid container justifyContent={"center"} alignItems="center" spacing={2}>
@@ -46,4 +46,4 @@ const Datepicker = () => {
   )
 }
 
-export default Datepicker
+export default DatePickerCom

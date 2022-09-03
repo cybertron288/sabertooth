@@ -11,3 +11,40 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.MuiPickersDay-root{
+  border-radius: 0px !important;
+  background-color: transparent !important;
+  border: 1px solid #424050 !important;
+}
+
+.Mui-selected{
+  background-color: #E2795B !important;
+
+}
+
+.MuiCalendarPicker-root {
+  background-color: #2C2C32 !important;
+  /* box-shadow: #2C2C32; */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
+}
+
+.MuiPopperUnstyled-root .MuiPaper-rounded{
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 20px 0px !important;
+}
+
+.MuiTextField-root{
+width: 150px !important;
+}
+
+.recharts-cartesian-grid line{
+  stroke: #4A3838;
+}
+
+.on {
+  background-color: green;
+}
+
+.bar {
+border: 2px solid red;
+}
